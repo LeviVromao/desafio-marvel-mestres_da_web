@@ -1,0 +1,112 @@
+  { 
+    "image": [{
+      "name": "Capitão América",
+      "page": "filmes", 
+      "src": "./captain_america.jpg", 
+      "story": "Em Capitão América: O Primeiro Vingador, conhecemos a história de Steve Rogers (Chris Evans) e como ele se tornou o melhor soldado do mundo."
+    },
+    {
+      "name": "Capitã Marvel",
+      "page": "personagens", 
+      "src": "./captain_marvel.jpg",
+      "story": "Capitã Marvel, parte do exército de elite dos Kree, uma raça alienígena, encontra-se no meio de uma batalha entre seu povo e os Skrulls.",
+      "aparicoes": [
+        "Marvel Super-Heroes #13",
+        "Vingadores: Guerra Infinita",
+        "Capitã Marvel",
+        "Vingadores: Ultimato"
+      ]
+    },
+    {
+      "name": "Thanos",
+      "page": "personagens",
+      "src": "thanos.jpg",
+      "story": "A lua Titã era governada por Mentor (A'Lars), quando então reinava paz e tecnologia. Mentor tinha dois filhos: Eros e Thanos.  Ao contrário do irmão, Thanos, era bem mais poderoso e almejava ainda mais.",
+      "aparicoes": [
+        "Guardiões da Galáxia",
+        "Vingadores: Era de Ultron",
+        "Vingadores: Guerra Infinita",
+        "Vingadores: Ultimato"
+      ]
+    },
+    {
+      "name": "Homem de Ferro",
+      "page": "filmes", 
+      "src": "./first_iron_man.jpg",
+      "story": "Tony Stark (Robert Downey Jr.) é um industrial bilionário, que também é um brilhante inventor, ao ser sequestrado, ele é obrigado a construir uma arma devastadora, mas ao invés disso, cria uma armadura capaz de mudar a história."
+    },
+    {
+      "name": "Hulk",
+      "page": "personagens", 
+      "src": "./hulk.jpg",
+      "story": "Na história original dos quadrinhos, o Hulk é um selvagem e poderoso alter ego do Dr. Robert Bruce Banner, um cientista que foi atingido por raios gama enquanto salvava um adolescente durante o teste militar.",
+      "aparicoes": [
+        "O Retorno do Incrivel Hulk",
+        "O Julgamento do Incrível Hulk",
+        "A Morte do Incrível Hulk",
+        "Hulk",
+        "O Incrível Hulk"
+      ]
+    },
+    {
+      "name": "Homem de Ferro 2",
+      "page": "filmes", 
+      "src": "./second_iron_man.jpg",
+      "story": "O mundo já sabe que o inventor bilionário Tony Stark (Robert Downey Jr.) é o super-herói blindado Homem de Ferro. Sofrendo pressão do governo, da mídia e do público para compartilhar sua tecnologia com as forças armadas"
+    },
+    {
+      "name": "Surfista Prateado: Parábola",
+      "page": "hqs", 
+      "src": "./silver_surfer.jpg",
+      "story": "O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado, Galactus jurou não consumir o planeta, mas e se, em vez disso, ele transformar a civilização em seus adoradores?"
+    },
+    {
+      "name": "Homem-Aranha",
+      "page": "personagens", 
+      "src": "./spider.jpg",
+      "story": "Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.",
+      "aparicoes": [
+        "Homem de Ferro 2",
+        "Homem-Formiga",
+        "Homem-Aranha: De Volta ao Lar",
+        "Vingadores: Guerra Infinita",
+        "Vingadores: Ultimato",
+        "Homem-Aranha: Longe de Casa",
+        "E se...?",
+        "Homem-Aranha: Sem Volta Para Casa"
+      ]
+    },
+    {
+      "name": "Thor: Vikings",
+      "page": "hqs", 
+      "src": "./thor_hq.jpg",
+      "story": "Garth Ennis e sua violência atacam novamente na HQ que leva a violência das histórias de Thor ao limite! Na minissérie de 2003 vemos vikings de um passado distante voltando a vida."
+    },
+    {
+      "name": "Thor",
+      "page": "filmes", 
+      "src": "./thor_movie.jpg",
+      "story": "Quando é banido do reino de Asgard e exilado na Terra, o arrogante guerreiro Thor (Chris Hemsworth) é obrigado a lutar para reaver seus poderes perdidos."
+    },
+    {
+      "name": "Wanda Maximoff",
+      "page": "personagens", 
+      "src": "./wanda.jpg",
+      "story": "Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha Wundagore, base do Alto Evolucionário. Durante anos, ela e seu irmão gêmeo, Pietro, acreditavam que eram filhos de um casal de ciganos.",
+      "aparicoes": [
+        "Capitão América: Guerra Civil", 
+        "Capitão América: O Soldado Invernal",
+        "Vingadores: Era de Ultron",
+        "Vingadores: Guerra infinita",
+        "Vingadores: Ultimato"
+      ]
+    },
+    {
+      "name": "Wolverine: Origens",
+      "page": "hqs", 
+      "src": "./wolverine_hq.jpg",
+      "story": "Origem é uma minissérie em quadrinhos publicada pela Marvel Comics em seis edições, entre 2001 e 2002. A história conta a revelação do passado do personagem Wolverine. "
+    }
+    ]
+    }
+    
