@@ -15,7 +15,8 @@ export default function Header(){
     sliderNavRef.current?.childNodes.forEach(child => {
       if(child.textContent?.toLowerCase() === window.location.href.split("/")[3]) {
         const childDivElement = child as HTMLDivElement
-        childDivElement.classList.add("active")
+        console.log(childDivElement)
+        childDivElement.style.color = "#FFF"
       }
     })
   }, [])
