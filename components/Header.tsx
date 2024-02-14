@@ -27,14 +27,12 @@ export default function Header(){
 
   const handleMenuClick = () => {
     const sliderNav = sliderNavRef.current as HTMLDivElement
-    sliderNav.classList.toggle("navbarToggle")
   }
 
   const handleExit = () => {
     localStorage.removeItem("user")
     router.push("/");
   }
-  console.log(viewportSize)
   return (
     <ContainerHeader>
       <PagesLink href="/">
@@ -103,6 +101,9 @@ const PagesLink = styled.a`
   &:hover{
     color: #FFF;
   };
+  @media (max-width: 390px){
+    padding: 0;
+  }
   padding: 16px 0 0 0;
 `
 const ContainerUserAndExit = styled.div `
@@ -125,6 +126,7 @@ const UserImage = styled.img`
 `
 const ContainerRightSideHeader = styled.div`
   display: flex;
+  align-items: center;
   @media (min-width: 870px) {
     align-items: center;
     justify-content: space-around;
@@ -133,6 +135,23 @@ const ContainerRightSideHeader = styled.div`
   @media (max-width: 390px) {
     gap: 27px;
   }
+`
+const ContainerNav = styled.div `
+  position: absolute;
+  top: 0%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 140px;
+  height: 104px;
+  transform: translateY(0);
+  opacity: 0;
+  z-index: 9999;
+  transition: all 1s ease-out;
+  background: black;
+  border-radius: 17px;
+  padding: 8px;
 `
 const ContainerMenuPages = styled.div`
   display: none;
@@ -143,21 +162,11 @@ const ContainerMenuPages = styled.div`
   @media (max-width: 390px){
     display: flex;
   }
-`
-const ContainerNav = styled.div `
-  display: none;
-  align-items: center;
-  position: absolute;
-  flex-direction: column;
-  top: 0%;
-  width: 140px;
-  transform: translateY(0);
-  opacity: 0;
-  z-index: 9999;
-  transition: all 1s ease-out;
-  background: black;
-  border-radius: 17px;
-  padding: 8px;
+  &:hover ${ContainerNav}{
+    display: flex;
+    opacity: 1;
+    transform: translateY(55px);
+  }
 `
 const ContainerMenuBurguer = styled.div`
   position: relative;

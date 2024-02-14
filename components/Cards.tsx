@@ -6,16 +6,16 @@ export default function Cards({page, images}: IProps) {
   const containerCardRef = useRef<HTMLDivElement>(null)
   const containerDetailRef = useRef<HTMLDivElement>(null)
 
-  const handleOverrideContentOnMouseOver = () => {
-    const containerDetailRect = containerDetailRef.current?.getBoundingClientRect() || new DOMRect()
+  const handleOverrideContentOnMouseOver = () => { // checa se containerDetail ultrapassa o ContainerCard em largura
+    const containerDetailRect = containerDetailRef.current?.getBoundingClientRect() || new DOMRect() // pega o tamanho do componente no Rect
     const containerCardRect = containerCardRef.current?.getBoundingClientRect() || new DOMRect()
-    const newPositionRight = containerDetailRect.right + 237
-    const lastChild = containerCardRef.current?.childNodes[containerCardRef.current?.childNodes.length - 1] as HTMLDivElement
+    const newPositionRight = containerDetailRect.right + 237 // testa se com 237 a mais de pixel ele ultrapassa
+    const lastChild = containerCardRef.current?.childNodes[containerCardRef.current?.childNodes.length - 1] as HTMLDivElement // resgata o ultimo filho containerCard
     const containerDetail = lastChild.children[0] as HTMLDivElement
     lastChild.onmouseover = ((ev: MouseEvent) => {
-      if(newPositionRight > containerCardRect.right) {
+      if(newPositionRight > containerCardRect.right) { // se ultrapassar
         containerDetail.style.transform = "translateX(-282px)"
-        containerDetail.style.borderRadius = "24px 0px 0px 24px"
+        containerDetail.style.borderRadius = "24px 0px 0px 24px" // move os elementos
         lastChild.style.borderRadius = "0 24px 24px 0"
       } else {
         containerDetail.style.transform = "translateX(237px)" 

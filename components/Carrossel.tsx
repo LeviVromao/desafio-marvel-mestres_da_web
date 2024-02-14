@@ -27,7 +27,6 @@ export default function Carousel({children}: ICarouselProps) {
       return newIndex
     })
     const item = childrens![currentItem] as HTMLDivElement
-    console.log(item.classList.contains('active'))
     item.scrollIntoView({
       behavior: "smooth",
       inline: "center",
