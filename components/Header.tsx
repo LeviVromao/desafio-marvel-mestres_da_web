@@ -13,7 +13,7 @@ export default function Header(){
   useEffect(() => {
     setViewportSize(window.innerWidth)
     sliderNavRef.current?.childNodes.forEach(child => {
-      if(child.textContent?.toLowerCase() === window.location.href.split("/")[3]) {
+      if(child.textContent?.toLowerCase().replace("'", "") === window.location.href.split("/")[3]) {
         const childDivElement = child as HTMLDivElement
         childDivElement.style.color = "#FFF"
       }
