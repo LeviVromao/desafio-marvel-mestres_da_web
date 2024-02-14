@@ -12,6 +12,12 @@ export default function Header(){
   
   useEffect(() => {
     setViewportSize(window.innerWidth)
+    sliderNavRef.current?.childNodes.forEach(child => {
+      if(child.textContent?.toLowerCase() === window.location.href.split("/")[3]) {
+        const childDivElement = child as HTMLDivElement
+        childDivElement.classList.add("active")
+      }
+    })
   }, [])
 
   useEffect(() => {
@@ -24,10 +30,6 @@ export default function Header(){
       window.removeEventListener('resize', handleResize)
     }
   }, [viewportSize])
-
-  const handleMenuClick = () => {
-    const sliderNav = sliderNavRef.current as HTMLDivElement
-  }
 
   const handleExit = () => {
     localStorage.removeItem("user")
@@ -51,18 +53,17 @@ export default function Header(){
                 fontSize: "35px", 
                 position: "absolute", 
                 zIndex: 9999
-              }} 
-              onClick={handleMenuClick}
+              }}
             />
             <IoClose style={{color: "#84848D", fontSize: "35px", opacity: 0}}/>
           </ContainerMenuBurguer>
-          <ContainerNav ref={sliderNavRef}>
+          <ContainerNav>
             <PagesLink href="/personagens">Personagens</PagesLink>
             <PagesLink href="/filmes">Filmes</PagesLink>
             <PagesLink href="/hqs">HQ's</PagesLink>
           </ContainerNav>
         </ContainerMenuPages>
-        <ContainerPages>
+        <ContainerPages  ref={sliderNavRef}>
           <PagesLink href="/personagens">Personagens</PagesLink>
           <PagesLink href="/filmes">Filmes</PagesLink>
           <PagesLink href="/hqs">HQ's</PagesLink>
@@ -138,15 +139,14 @@ const ContainerRightSideHeader = styled.div`
 `
 const ContainerNav = styled.div `
   position: absolute;
-  top: 0%;
-  display: none;
+  visibility: hidden;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   width: 140px;
   height: 104px;
-  transform: translateY(0);
-  opacity: 0;
+  transform: translateY(40px);
   z-index: 9999;
   transition: all 1s ease-out;
   background: black;
@@ -163,11 +163,12 @@ const ContainerMenuPages = styled.div`
     display: flex;
   }
   &:hover ${ContainerNav}{
-    display: flex;
-    opacity: 1;
-    transform: translateY(55px);
+    transform: translateY(83px);
+    transition: all 1s ease-out;
+    visibility: visible;
   }
 `
 const ContainerMenuBurguer = styled.div`
   position: relative;
+  z-index: 9999999;
 `

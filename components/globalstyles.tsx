@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
     transform: translateY(55px);
   }
 
+  .active {
+    color: #FFF
+  }
+
   a {
     color: inherit;
     text-decoration: none;
